@@ -1,0 +1,23 @@
+{
+  "name": "mfenc-decompiler",
+  "version": "1.0.0",
+  "description": "A decompiler for php mfenc",
+  "keywords": [
+    "php",
+    "mfenc",
+    "decompiler"
+  ],
+  "main": "web/index.js",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "flowchart.js": "^1.11.0",
+    "svg.draggable.js": "^2.2.1",
+    "svg.js": "^2.6.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "webpack"
+  },
+  "author": "Ganlv",
+  "license": "AGPL-3.0"
+}

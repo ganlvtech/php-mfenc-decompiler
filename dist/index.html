@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+<style>
+    body {
+        background-color: #555;
+    }
+</style>
+<script src="bundle.js"></script>
+<input type="text" id="funcNumber" value="1" onkeypress="if (event.keyCode === 13) {loadFlowchart();}">
+<button onclick="loadFlowchart()">读取</button>
+<div id="drawing"></div>
+<div id="diagram"></div>
+<script>
+    function loadFlowchart() {
+        var funcNumber = document.getElementById('funcNumber').value;
+        axios.get('http://127.0.0.1:8000/test.php?flowchart=' + funcNumber)
+            .then(function (response) {
+                if (response.data) {
+                    window.instructionsFlowchart = response.data;
+                    window.diagram = flowchart.parse(instructionsFlowchart);
+                    diagram.drawSVG('diagram');
+                }
+            });
+    }
+</script>
