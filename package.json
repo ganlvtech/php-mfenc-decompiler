@@ -9,7 +9,7 @@
   ],
   "main": "web/index.js",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
     "flowchart.js": "^1.11.0",
     "svg.draggable.js": "^2.2.1",
     "svg.js": "^2.6.4"
